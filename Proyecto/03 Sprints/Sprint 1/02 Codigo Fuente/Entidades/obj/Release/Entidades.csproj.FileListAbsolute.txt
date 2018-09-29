@@ -1,0 +1,5 @@
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\bin\Release\Entidades.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\bin\Release\Entidades.pdb
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Release\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Release\Entidades.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Release\Entidades.pdb

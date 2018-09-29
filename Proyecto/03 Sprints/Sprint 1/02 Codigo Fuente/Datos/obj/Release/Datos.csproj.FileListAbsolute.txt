@@ -1,0 +1,7 @@
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Release\Datos.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Release\Datos.pdb
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Release\Entidades.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Release\Entidades.pdb
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\obj\Release\Datos.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\obj\Release\Datos.pdb

@@ -1,0 +1,53 @@
+﻿<div class="container">
+    <form name="formProd" novalidate>
+        <h4>Producto</h4>
+        <!--campos para la descripcion del producto-->
+        <div class="form-row">
+            <div class="form-group col-md-8 {{ (formProd.descripcionProducto.$invalid) ? 'has-error' : '' }}">
+                <label for="descripcionProducto">Descripcion del Producto:</label>
+                <input type="text" class="form-control" id="descripcionProducto" name="descripcionProducto" ng-model="detallePedido.descripcionProducto" placeholder="Ingrese una descripcion corta del producto" required>
+                <small class="help-inline text-danger" ng-show="formProd.descripcionProducto.$error.required">Dato requerido</small>
+            </div>
+            <div class="form-group col-md-4 {{ (formProd.monto.$invalid) ? 'has-error' : '' }}">
+                <label for="monto">Descripcion del Producto:</label>
+                <input type="text" class="form-control" id="monto" name="monto" ng-model="detallePedido.monto" placeholder="Monto estimado del producto" required ng-pattern="/^[0-9]*$/">
+                <small class="help-inline text-danger" ng-show="formProd.monto.$error.required">Dato requerido</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="imagenProducto">Imagen del Producto:</label>
+            <!--input type="text" class="form-control" id="imagenProducto" aria-describedby="ayudaImagen" ng-model="detallePedido.imagenProducto" placeholder="Imagen" disabled-->
+
+            <input type="file" class="form-control-file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+            <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
+            <small id="ayudaImagen" class="form-text text-muted">Puede cargar una foto descriptiva del producto (Opcional)</small>
+            <img ng-src="{{imageSrc}}" class="imagenProducto" ng-model="detallePedido.imagenProducto" />
+        </div>
+        <h4>Comercio</h4>
+        <!--campos para la direccion del comercio-->
+        <div class="form-group">
+            <label for="ubicacionMapa">Seleccionar donde debe ser retirado:</label>
+            <div id="map" style="height:500px"></div>
+        </div>
+        <label for="calleComercio">Direccion del Comercio:</label>
+        <div class="form-row">
+            <div class="form-group col-md-9 {{ (formProd.calleComercio.$invalid) ? 'has-error' : '' }}">
+                <input type="text" class="form-control" id="calleComercio" name="calleComercio" ng-model="pedido.calleComercio" placeholder="Calle" required>
+                <!--small id="ayudaDireccionComercio" class="form-text text-muted">Puede detallar textualmente la direccion del comercio (Opcional)</!--small-->
+                <small class="help-inline text-danger" ng-show="formProd.calleComercio.$error.required">Dato requerido</small>
+            </div>
+            <div class="form-group col-md-3 {{ (formProd.nroCalleComercio.$invalid) ? 'has-error' : '' }}">
+                <input type="text" class="form-control" id="nroCalleComercio" name="nroCalleComercio" ng-model="pedido.nroCalleComercio" placeholder="Numero" required ng-pattern="/^[0-9]*$/">
+                <small class="help-inline text-danger" ng-show="formProd.nroCalleComercio.$error.required">Dato requerido</small>
+                <small class="help-inline text-danger" ng-show="formProd.nroCalleComercio.$error.pattern">Solo puede ingresar numeros</small>
+            </div>
+        </div>
+        <!--Boton para proceder al pago-->
+        <div class="form-group" align="right">
+            <button type="submit" class="btn btn-success" ng-click="formProd.$valid && redirect('Pago')">Continuar al Pago</button>
+        </div>
+    </form>
+
+    <script src="js/geolocation.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPlifMmZo1eHmzWCHX_nKSEgdNZRGiPmI&language=es&region=AR&callback=initMap"></script>
+</div>

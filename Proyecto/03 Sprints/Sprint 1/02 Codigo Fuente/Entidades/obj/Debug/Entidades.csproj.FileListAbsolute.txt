@@ -1,0 +1,10 @@
+C:\Users\Nico\Desktop\Con las otras carpetas borradas - copia\ISW-TP6\Entidades\bin\Debug\Entidades.dll
+C:\Users\Nico\Desktop\Con las otras carpetas borradas - copia\ISW-TP6\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Nico\Desktop\Con las otras carpetas borradas - copia\ISW-TP6\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\Con las otras carpetas borradas - copia\ISW-TP6\Entidades\obj\Debug\Entidades.dll
+C:\Users\Nico\Desktop\Con las otras carpetas borradas - copia\ISW-TP6\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\bin\Debug\Entidades.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.dll
+C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.pdb

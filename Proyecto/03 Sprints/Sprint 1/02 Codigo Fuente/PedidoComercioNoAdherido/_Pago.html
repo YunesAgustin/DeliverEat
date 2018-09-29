@@ -1,0 +1,166 @@
+﻿<div class="container">
+    <form name="formPago" novalidate>
+        <!--Inputs para la direccion de destino del pedido-->
+        <h4>Tu Direccion</h4>
+        <div class="form-row">
+            <div class="form-group col-md-6 {{ (formPago.calleCliente.$invalid) ? 'has-error' : '' }}">
+                <label for="calleCliente">Calle:</label>
+                <input type="text" class="form-control" id="calleCliente" name="calleCliente" aria-describedby="ayudaCalleCliente" ng-model="pedido.calleCliente" placeholder="Calle" required>
+                <small id="ayudaCalleCliente" class="form-text text-muted">Ingresa la direccion a donde queres que te llegue el pedido</small>
+                <small class="help-inline text-danger" ng-show="formPago.calleCliente.$error.required">Dato requerido</small>
+            </div>
+            <div class="form-group col-md-2 {{ (formPago.nroCalleCliente.$invalid) ? 'has-error' : '' }}">
+                <label for="nroCalleCliente">Numero:</label>
+                <input type="text" class="form-control" id="nroCalleCliente" name="nroCalleCliente" ng-model="pedido.nroCalleCliente" placeholder="Numero" required ng-pattern="/^[0-9]*$/">
+                <small class="help-inline text-danger" ng-show="formPago.nroCalleCliente.$error.required">Dato requerido</small>
+                <small class="help-inline text-danger" ng-show="formPago.nroCalleCliente.$error.pattern">Solo puede ingresar numeros</small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="pisoCliente">Piso:</label>
+                <input type="text" class="form-control" id="pisoCliente" ng-model="pedido.pisoCliente" placeholder="Piso">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="deptoCliente">Departamento:</label>
+                <input type="text" class="form-control" id="deptoCliente" ng-model="pedido.deptoCliente" placeholder="Departamento">
+            </div>
+        </div>
+        <!--Select para forma de pago-->
+        <h4>Informacion de Pago</h4>
+        <div class="form-group {{ (formPago.formaPago.$invalid) ? 'has-error' : '' }}">
+            <label for="formaPago">Forma de Pago:</label>
+            <select id="formaPago" name="formaPago" class="form-control" ng-model="pago.idTipoPago" required>
+                <option value="">Elegir...</option>
+                <option value="1">Efectivo</option>
+                <option value="2">Tarjeta VISA</option>
+            </select>
+            <small class="help-inline text-danger" ng-show="formPago.formaPago.$error.required">Seleccione una forma de pago</small>
+        </div>
+        <!--Inputs para forma de pago = Efectivo-->
+        <div ng-show="pago.idTipoPago == '1'">
+            <div class="form-row">
+                <div class="form-group col-md-6 {{ (formPago.conCuantoPaga.$invalid) ? 'has-error' : '' }}">
+                    <label for="conCuantoPaga">Con Cuanto Pagas:</label>
+                    <input type="text" class="form-control" id="conCuantoPaga" name="conCuantoPaga" aria-describedby="ayudaConCuantoPaga" ng-model="pago.pagoCon" ng-change="calcularMontos()" placeholder="Ingresa con cuanto vas a pagar" ng-required="pago.idTipoPago == '1'" ng-pattern="/^[0-9]*$/">
+                    <small class="help-inline text-danger" ng-show="formPago.conCuantoPaga.$error.required">Dato requerido</small>
+                    <small class="help-inline text-danger" ng-show="formPago.conCuantoPaga.$error.pattern">Solo puede ingresar un monto numerico</small>
+                    <small class="help-inline text-danger" ng-show="!calcularMontos()">El monto es inferior al total</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="vuelto">Tu vuelto:</label>
+                    <input type="text" class="form-control" id="vuelto" ng-model="pago.vuelto" placeholder="Vuelto" readonly>
+                </div>
+            </div>
+        </div>
+        <!--Inputs para forma de pago = Tarjeta-->
+        <div ng-show="pago.idTipoPago == '2'">
+            <!--Datos del titular de la tarjeta-->
+            <div class="form-row">
+                <div class="form-group col-md-5 {{ (formPago.titularTarjeta.$invalid) ? 'has-error' : '' }}">
+                    <label for="titularTarjeta">Nombre y Apellido:</label>
+                    <input type="text" class="form-control" id="titularTarjeta" name="titularTarjeta" aria-describedby="ayudaTitularTarjeta" ng-model="pago.titularTarjeta" placeholder="Ingrese su nombre y apellido" ng-required="pago.idTipoPago == '2'">
+                    <small id="ayudaTitularTarjeta" class="form-text text-muted">Ingrese su nombre y apellido como figura en la tarjeta</small>
+                    <small class="help-inline text-danger" ng-show="formPago.titularTarjeta.$error.required">Dato requerido</small>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="tipoDocumento">Tipo de Documento:</label>
+                    <select id="tipoDocumento" class="form-control" ng-model="pago.idTipoDocumento">
+                        <option value="" selected>Elegir...</option>
+                        <option value="1" selected>DNI</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 {{ (formPago.documento.$invalid) ? 'has-error' : '' }}">
+                    <label for="documento">Numero de Documento:</label>
+                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese su numero de documento" ng-model="pago.documento" ng-required="pago.idTipoPago == '2'" pattern="[0-9]{8}">
+                    <small class="help-inline text-danger" ng-show="formPago.documento.$error.required">Dato requerido</small>
+                    <small class="help-inline text-danger" ng-show="formPago.documento.$error.pattern">Formato incorrecto</small>
+                </div>
+            </div>
+            <!--Datos de la tarjeta-->
+            <div class="form-row">
+                <div class="form-group col-md-5 {{ (formPago.numeroTarjeta.$invalid) ? 'has-error' : '' }}">
+                    <label for="numeroTarjeta">Numero de Tarjeta:</label>
+                    <input type="text" class="form-control" id="numeroTarjeta" name="numeroTarjeta" placeholder="4000 1234 5678 9010" ng-model="pago.nroTrajeta" ng-required="pago.idTipoPago == '2'" pattern="[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}">
+                    <small class="help-inline text-danger" ng-show="formPago.numeroTarjeta.$error.required">Dato requerido</small>
+                    <small class="help-inline text-danger" ng-show="formPago.numeroTarjeta.$error.pattern">Formato incorrecto</small>
+                </div>
+                <div class="form-group col-md-3 {{ (formPago.codigoSeguridad.$invalid) ? 'has-error' : '' }}">
+                    <label for="codigoSeguridad">Codigo de Seguridad:</label>
+                    <input type="text" class="form-control" id="codigoSeguridad" name="codigoSeguridad" placeholder="000" ng-model="pago.codigoSeguridad" ng-required="pago.idTipoPago == '2'" pattern="[0-9]{3}">
+                    <small class="help-inline text-danger" ng-show="formPago.codigoSeguridad.$error.required">Dato requerido</small>
+                    <small class="help-inline text-danger" ng-show="formPago.codigoSeguridad.$error.pattern">Debe ser un numero de 3 digitos</small>
+                </div>
+                <div class="form-group col-md-4 {{ (formPago.fechaVencimiento.$invalid) ? 'has-error' : '' }}">
+                    <label for="fechaVencimiento">Fecha de Vencimiento:</label>
+                    <input type="text" class="form-control" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/AA" ng-model="pago.fechaVencimiento" ng-required="pago.idTipoPago == '2'" pattern="[0-9]{2}[/][0-9]{2}">
+                    <small class="help-inline text-danger" ng-show="formPago.fechaVencimiento.$error.required">Dato requerido</small>
+                    <small class="help-inline text-danger" ng-show="formPago.fechaVencimiento.$error.pattern || !estaVigente(pago.fechaVencimiento)">Fecha no valida</small>
+                </div>
+            </div>
+            <!--Domicilio de faturacion-->
+            <div class="form-row">
+                <div class="form-group col-md-5 {{ (formPago.domicilioFacturacion.$invalid) ? 'has-error' : '' }}">
+                    <label for="domicilioFacturacion">Domicilio de Facturacion:</label>
+                    <input type="text" class="form-control" id="domicilioFacturacion" name="domicilioFacturacion" aria-describedby="ayudaDomicilioFacturacion" ng-model="pago.domicilioFacturacion" placeholder="Ingrese su domicilio de faturacion" ng-required="pago.idTipoPago == '2'">
+                    <small id="ayudaDomicilioFacturacion" class="form-text text-muted">Ej: Calle Falsa 123, Piso 3, Depto. A</small>
+                    <small class="help-inline text-danger" ng-show="formPago.domicilioFacturacion.$error.required">Dato requerido</small>
+                </div>
+                <div class="form-group col-md-2 {{ (formPago.conCuantoPaga.$invalid) ? 'has-error' : '' }}">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" class="form-control" id="ciudad" name="ciudad" ng-model="pago.ciudad" placeholder="Ciudad" ng-required="pago.idTipoPago == '2'">
+                    <small class="help-inline text-danger" ng-show="formPago.ciudad.$error.required">Dato requerido</small>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="pais">Pais:</label>
+                    <select id="pais" class="form-control" ng-model="pago.idPais">
+                        <option value="" selected>Elegir...</option>
+                        <option value="1" selected>Argentina</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3 {{ (formPago.telefono.$invalid) ? 'has-error' : '' }}">
+                    <label for="telefono">Numero de Telefono:</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" ng-model="pago.telefono" placeholder="Ej: +5493515512345" pattern="+[0-9]{12,14}">
+                    <small class="help-inline text-danger" ng-show="formPago.telefono.$error.pattern">Formato incorrecto</small>
+                </div>
+            </div>
+        </div>
+        <!--Tiempo de entrega-->
+        <h4>Entrega</h4>
+        <div class="form-group {{ (formPago.tiempoEntrega.$invalid) ? 'has-error' : '' }}">
+            <label for="tiempoEntrega">Cuando Desea Recibirlo:</label>
+            <select id="tiempoEntrega" name="tiempoEntrega" class="form-control" ng-model="pedido.loAntesPosible" required>
+                <option value="" selected>Elegir...</option>
+                <option value="true">Lo antes posible</option>
+                <option value="false">Especificar fecha</option>
+            </select>
+            <small class="help-inline text-danger" ng-show="formPago.tiempoEntrega.$error.required">Seleccione alguna opcion de entrega</small>
+        </div>
+        <!--Inputs para tiempoEntrega = especificar fecha-->
+        <div class="form-row" ng-show="pedido.loAntesPosible == 'false'">
+            <div class="form-group col-md-3 {{ (formPago.fechaEntrega.$invalid) ? 'has-error' : '' }}">
+                <label for="fechaEntrega">Fecha:</label>
+                <input type="text" class="form-control" id="fechaEntrega" name="fechaEntrega" ng-model="pedido.fechaEntrega" placeholder="DD/MM/AAAA" ng-required="pedido.loAntesPosible == 'false'" pattern="[0-9]{2}[/][0-9]{2}[/][0-9]{4}">
+                <small class="help-inline text-danger" ng-show="formPago.fechaEntrega.$error.required">Dato requerido</small>
+                <small class="help-inline text-danger" ng-show="formPago.fechaEntrega.$error.pattern || !validarFecha(pedido.fechaEntrega)">Fecha no valida</small>
+            </div>
+            <div class="form-group col-md-3 {{ (formPago.horaEntrega.$invalid) ? 'has-error' : '' }}">
+                <label for="horaEntrega">A las:</label>
+                <input type="text" class="form-control" aria-describedby="ayudaHoraEntrega" id="horaEntrega" name="horaEntrega" ng-model="pedido.horaEntrega" placeholder="00:00" ng-required="pedido.loAntesPosible == 'false'" pattern="[0-9]{2}[:][0-9]{2}">
+                <small id="ayudaHoraEntrega" class="form-text text-muted">Hora en formato 24hs. (Opcional)</small>
+                <small class="help-inline text-danger" ng-show="formPago.horaEntrega.$error.pattern || !validarHora(pedido.horaEntrega)">Hora no valida</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-9" align="right">
+                <label>Total (+$30 de Comision):&nbsp;</label>
+            </div>
+            <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="total" placeholder="Total" ng-model="pago.total" readonly />
+            </div>
+        </div>
+        <!--Botones para avanzar o volver-->
+        <div class="form-row">
+            <div class="form-group col-md-6" align="left"><a class="btn btn-danger" href="#/AgregarProducto">Volver</a></div>
+            <div class="form-group col-md-6" align="right"><button type="submit" class="btn btn-success" ng-click="formPago.$valid && validaciones() && registrarPedido()">Confirmar Pago</button></div>
+        </div>
+    </form>
+</div>

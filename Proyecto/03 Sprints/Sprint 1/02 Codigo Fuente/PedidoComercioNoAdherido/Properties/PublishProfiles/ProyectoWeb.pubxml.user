@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Nico\Desktop\TP6 Sistema de Archivos</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Datos.dll">
+      <publishTime>09/21/2018 15:33:39</publishTime>
+    </File>
+    <File Include="bin/Entidades.dll">
+      <publishTime>09/21/2018 15:33:38</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/17/2018 23:59:58</publishTime>
+    </File>
+    <File Include="bin/PedidoComercioNoAdherido.dll">
+      <publishTime>09/21/2018 15:33:40</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>09/17/2018 23:59:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>09/17/2018 23:59:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>09/17/2018 23:59:58</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.min.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.min.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.min.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.min.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css.map">
+      <publishTime>09/15/2018 19:18:47</publishTime>
+    </File>
+    <File Include="css/estilo.css">
+      <publishTime>09/20/2018 23:43:58</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/19/2018 16:12:04</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/20/2018 16:15:10</publishTime>
+    </File>
+    <File Include="js/angular-route.js">
+      <publishTime>09/15/2018 19:20:02</publishTime>
+    </File>
+    <File Include="js/angular.js">
+      <publishTime>09/15/2018 23:07:53</publishTime>
+    </File>
+    <File Include="js/angular.min.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/app.js">
+      <publishTime>09/21/2018 03:27:19</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.js.map">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.min.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.min.js.map">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.js.map">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js.map">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/geolocation.js">
+      <publishTime>09/17/2018 16:57:17</publishTime>
+    </File>
+    <File Include="js/jquery-3.3.1.min.js">
+      <publishTime>09/15/2018 19:19:02</publishTime>
+    </File>
+    <File Include="js/ui-bootstrap-tpls-2.5.0.min.js">
+      <publishTime>09/18/2018 02:43:28</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/18/2018 00:00:01</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/21/2018 15:33:43</publishTime>
+    </File>
+    <File Include="_Pago.html">
+      <publishTime>09/21/2018 01:14:11</publishTime>
+    </File>
+    <File Include="_PedidoComercioNoAdherido.html">
+      <publishTime>09/21/2018 00:43:11</publishTime>
+    </File>
+    <File Include="_PedidoRealizado.html">
+      <publishTime>09/20/2018 23:28:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
