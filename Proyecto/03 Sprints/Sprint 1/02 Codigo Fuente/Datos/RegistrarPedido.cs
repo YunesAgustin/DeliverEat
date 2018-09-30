@@ -9,14 +9,16 @@ namespace Datos
 {
     public class RegistrarPedido
     {
-        public void nuevoPedido(Pedido nPedido)
+        public void RegistrarNuevoPedido(Pedido nuevoPedido)
         {
+            //Inserta el nuevo pedido junto con su detalle e informacion del pago
             PagoDAO pagoDAO = new PagoDAO();
             DetallePedidoDAO detallePedidoDAO = new DetallePedidoDAO();
             PedidoDAO pedidoDAO = new PedidoDAO();
-            pagoDAO.insertarPago(nPedido.pago);
-            detallePedidoDAO.insertDetallePedido(nPedido.detallePedido);
-            pedidoDAO.insertarPedido(nPedido);
+
+            pagoDAO.InsertarPago(nuevoPedido.pago);
+            detallePedidoDAO.InsertarDetallePedido(nuevoPedido.detallePedido);
+            pedidoDAO.InsertarPedido(nuevoPedido);
         }
     }
 }

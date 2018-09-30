@@ -9,28 +9,22 @@ namespace Datos
 {
     class DetallePedidoDAO
     {
-        public void insertDetallePedido(DetallePedido nuevoDetallePedido)
+        public void InsertarDetallePedido(DetallePedido nuevoDetallePedido)
         {
-            string inserts = "INSERT INTO DetallesPedido(descripcionProducto, monto";
-            string values = "VALUES ('" + nuevoDetallePedido.descripcionProducto + "', " + nuevoDetallePedido.monto;
-
-            //if (!nuevoDetallePedido.imagenProducto.Equals(null))
-            //{
-            //    inserts += ", imagenProducto";
-            //    values += ", " + nuevoDetallePedido.imagenProducto;
-            //}
-            inserts += ") ";
-            values += ");";
-
+            //Inserta un detalle de pedido en la base de datos
+            string inserts = "INSERT INTO DetallesPedido(descripcionProducto, monto) ";
+            string values = "VALUES ('" + nuevoDetallePedido.descripcionProducto + "', " + nuevoDetallePedido.monto + ");";
             string query = inserts + values;
-            BDHelper.insert(query);
-            nuevoDetallePedido.idDetallePedido = getIdentity();
+
+            BDHelper.Insert(query);
+            nuevoDetallePedido.idDetallePedido = ObtenerIdentity();
         }
 
-        public int getIdentity()
+        public int ObtenerIdentity()
         {
+            //Retorna el ID que se le asigno al detalle de pedido insertado
             string query = "SELECT MAX(idDetallePedido) FROM DetallesPedido;";
-            return BDHelper.select(query);
+            return BDHelper.Select(query);
         }
     }
 }

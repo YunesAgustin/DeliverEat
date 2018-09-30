@@ -10,40 +10,44 @@ namespace Datos
 {
     class BDHelper
     {
-        //local connection string
-        static string user = "sa";
-        static string pass = "pav2017";
-        static String cnxString = "Provider=SQLOLEDB.1;Password=" + pass + ";Persist Security Info=True;User ID=" + user + ";Initial Catalog=DeliverEat;Data Source=localhost\\SQLEXPRESS";
+        //String de conexion a la base de datos
+        static string usuario = "sa";
+        static string clave = "pav2017";
+        static string stringConexion = "Provider=SQLOLEDB.1;Password=" + clave + ";Persist Security Info=True;User ID=" + usuario + ";Initial Catalog=DeliverEat;Data Source=localhost\\SQLEXPRESS";
 
-        public static void insert(string query)
+        public static void Insert(string query)
         {
-            OleDbConnection cnx = new OleDbConnection();
-            OleDbCommand cmd = new OleDbCommand();
-            //abro conexion
-            cnx.ConnectionString = cnxString;
-            cnx.Open();
-            //comando
-            cmd.Connection = cnx;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = query;
-            //execute
-            cmd.ExecuteNonQuery();
-            cnx.Close();
+            //Realiza el insert de la sentencia que entra como parametro
+            OleDbConnection conexion = new OleDbConnection();
+            OleDbCommand comando = new OleDbCommand();
+            
+            conexion.ConnectionString = stringConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = query; 
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
         }
 
-        public static int select(string query)
+        public static int Select(string query)
         {
-            OleDbConnection cnx = new OleDbConnection();
-            OleDbCommand cmd = new OleDbCommand();
-            //abro conexion
-            cnx.ConnectionString = cnxString;
-            cnx.Open();
-            //comando
-            cmd.Connection = cnx;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = query;
-            //cargo tabla
-            int identity = Convert.ToInt32(cmd.ExecuteScalar());
+            //Ejecuta la consulta que entra como parametro y devuelve la primera columna de la primera fila
+            OleDbConnection conexion = new OleDbConnection();
+            OleDbCommand comando = new OleDbCommand();
+            
+            conexion.ConnectionString = stringConexion;
+            conexion.Open();
+            
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = query;
+            int identity = Convert.ToInt32(comando.ExecuteScalar());
+
+            conexion.Close();
+
             return identity;
         }
     }

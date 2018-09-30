@@ -9,7 +9,7 @@
                 <small class="help-inline text-danger" ng-show="formProd.descripcionProducto.$error.required">Dato requerido</small>
             </div>
             <div class="form-group col-md-4 {{ (formProd.monto.$invalid) ? 'has-error' : '' }}">
-                <label for="monto">Descripcion del Producto:</label>
+                <label for="monto">Monto Estimado:</label>
                 <input type="text" class="form-control" id="monto" name="monto" ng-model="detallePedido.monto" placeholder="Monto estimado del producto" required ng-pattern="/^[0-9]*$/">
                 <small class="help-inline text-danger" ng-show="formProd.monto.$error.required">Dato requerido</small>
             </div>
@@ -21,7 +21,6 @@
             <input type="file" class="form-control-file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
             <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
             <small id="ayudaImagen" class="form-text text-muted">Puede cargar una foto descriptiva del producto (Opcional)</small>
-            <img ng-src="{{imageSrc}}" class="imagenProducto" ng-model="detallePedido.imagenProducto" />
         </div>
         <h4>Comercio</h4>
         <!--campos para la direccion del comercio-->

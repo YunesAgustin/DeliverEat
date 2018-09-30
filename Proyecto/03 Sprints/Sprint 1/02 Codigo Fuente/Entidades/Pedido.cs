@@ -8,7 +8,6 @@ namespace Entidades
 {
     public class Pedido
     {
-        //clase mas o meee, no habia tiempo
         public int idCliente { get; set; }
         public DetallePedido detallePedido { get; set; }
         public Pago pago { get; set; }
