@@ -1,5 +1,7 @@
 # DeliverEat
-TP6 - Implementacion de la User Story: Pedido de "lo que sea"
+UTN - FRC
+
+Ingenieria de Software
 
 Grupo 11:
 - Carballido, Manuel (69859)
