@@ -94,3 +94,21 @@ C:\Users\Nico\Desktop\ultima version\ISW-TP6\PedidoComercioNoAdherido\bin\System
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.csprojResolveAssemblyReference.cache
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.dll
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\PedidoComercioNoAdherido.dll.config
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\PedidoComercioNoAdherido.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\PedidoComercioNoAdherido.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Datos.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Entidades.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Newtonsoft.Json.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Net.Http.Formatting.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Web.Http.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Web.Http.WebHost.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Datos.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Entidades.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\Newtonsoft.Json.xml
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Net.Http.Formatting.xml
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Web.Http.xml
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\bin\System.Web.Http.WebHost.xml
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\PedidoComercioNoAdherido\obj\Debug\PedidoComercioNoAdherido.pdb

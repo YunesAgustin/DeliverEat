@@ -12,3 +12,10 @@ C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Debug\Datos.pdb
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Debug\Entidades.dll
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\bin\Debug\Entidades.pdb
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Datos\obj\Debug\Datos.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\bin\Debug\Datos.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\bin\Debug\Datos.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\bin\Debug\Entidades.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\bin\Debug\Entidades.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\obj\Debug\Datos.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Datos\obj\Debug\Datos.pdb

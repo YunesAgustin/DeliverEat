@@ -63,10 +63,11 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="tipoDocumento">Tipo de Documento:</label>
-                    <select id="tipoDocumento" class="form-control" ng-model="pago.idTipoDocumento">
+                    <select id="tipoDocumento" name="tipoDocumento" class="form-control" ng-model="pago.idTipoDocumento" ng-required="pago.idTipoPago == '2'">
                         <option value="" selected>Elegir...</option>
                         <option value="1" selected>DNI</option>
                     </select>
+                    <small class="help-inline text-danger" ng-show="formPago.tipoDocumento.$error.required">Seleccione</small>
                 </div>
                 <div class="form-group col-md-4 {{ (formPago.documento.$invalid) ? 'has-error' : '' }}">
                     <label for="documento">Numero de Documento:</label>
@@ -111,10 +112,11 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="pais">Pais:</label>
-                    <select id="pais" class="form-control" ng-model="pago.idPais">
+                    <select id="pais" name="pais" class="form-control" ng-model="pago.idPais" ng-required="pago.idTipoPago == '2'">
                         <option value="" selected>Elegir...</option>
                         <option value="1" selected>Argentina</option>
                     </select>
+                    <small class="help-inline text-danger" ng-show="formPago.pais.$error.required">Seleccione</small>
                 </div>
                 <div class="form-group col-md-3 {{ (formPago.telefono.$invalid) ? 'has-error' : '' }}">
                     <label for="telefono">Numero de Telefono:</label>
@@ -144,7 +146,7 @@
             </div>
             <div class="form-group col-md-3 {{ (formPago.horaEntrega.$invalid) ? 'has-error' : '' }}">
                 <label for="horaEntrega">A las:</label>
-                <input type="text" class="form-control" aria-describedby="ayudaHoraEntrega" id="horaEntrega" name="horaEntrega" ng-model="pedido.horaEntrega" placeholder="00:00" ng-required="pedido.loAntesPosible == 'false'" pattern="[0-9]{2}[:][0-9]{2}">
+                <input type="text" class="form-control" aria-describedby="ayudaHoraEntrega" id="horaEntrega" name="horaEntrega" ng-model="pedido.horaEntrega" placeholder="00:00" pattern="[0-9]{2}[:][0-9]{2}">
                 <small id="ayudaHoraEntrega" class="form-text text-muted">Hora en formato 24hs. (Opcional)</small>
                 <small class="help-inline text-danger" ng-show="formPago.horaEntrega.$error.pattern || !validarHora(pedido.horaEntrega)">Hora no valida</small>
             </div>

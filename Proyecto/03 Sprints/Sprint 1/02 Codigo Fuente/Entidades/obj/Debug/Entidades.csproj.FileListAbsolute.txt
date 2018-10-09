@@ -8,3 +8,8 @@ C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\bin\Debug\Entidades.pdb
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.dll
 C:\Users\Nico\Desktop\ultima version\ISW-TP6\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Entidades\bin\Debug\Entidades.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Entidades\obj\Debug\Entidades.dll
+C:\Users\Nico\Nico\UTN\Repositorio DeliverEat\DeliverEat\Proyecto\03 Sprints\Sprint 1\02 Codigo Fuente\Entidades\obj\Debug\Entidades.pdb
