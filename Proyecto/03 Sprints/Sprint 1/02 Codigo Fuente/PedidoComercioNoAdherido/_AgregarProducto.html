@@ -4,8 +4,8 @@
         <!--campos para la descripcion del producto-->
         <div class="form-row">
             <div class="form-group col-md-8 {{ (formProd.descripcionProducto.$invalid) ? 'has-error' : '' }}">
-                <label for="descripcionProducto">Descripcion del Producto:</label>
-                <input type="text" class="form-control" id="descripcionProducto" name="descripcionProducto" ng-model="detallePedido.descripcionProducto" placeholder="Ingrese una descripcion corta del producto" required>
+                <label for="descripcionProducto">Descripción del Producto:</label>
+                <input type="text" class="form-control" id="descripcionProducto" name="descripcionProducto" ng-model="detallePedido.descripcionProducto" placeholder="Ingrese una descripción corta del producto" required>
                 <small class="help-inline text-danger" ng-show="formProd.descripcionProducto.$error.required">Dato requerido</small>
             </div>
             <div class="form-group col-md-4 {{ (formProd.monto.$invalid) ? 'has-error' : '' }}">
@@ -25,10 +25,10 @@
         <h4>Comercio</h4>
         <!--campos para la direccion del comercio-->
         <div class="form-group">
-            <label for="ubicacionMapa">Seleccionar donde debe ser retirado:</label>
+            <label for="ubicacionMapa">Seleccionar dónde debe ser retirado:</label>
             <div id="map" style="height:500px"></div>
         </div>
-        <label for="calleComercio">Direccion del Comercio:</label>
+        <label for="calleComercio">Dirección del Comercio:</label>
         <div class="form-row">
             <div class="form-group col-md-9 {{ (formProd.calleComercio.$invalid) ? 'has-error' : '' }}">
                 <input type="text" class="form-control" id="calleComercio" name="calleComercio" ng-model="pedido.calleComercio" placeholder="Calle" required>
@@ -38,7 +38,7 @@
             <div class="form-group col-md-3 {{ (formProd.nroCalleComercio.$invalid) ? 'has-error' : '' }}">
                 <input type="text" class="form-control" id="nroCalleComercio" name="nroCalleComercio" ng-model="pedido.nroCalleComercio" placeholder="Numero" required ng-pattern="/^[0-9]*$/">
                 <small class="help-inline text-danger" ng-show="formProd.nroCalleComercio.$error.required">Dato requerido</small>
-                <small class="help-inline text-danger" ng-show="formProd.nroCalleComercio.$error.pattern">Solo puede ingresar numeros</small>
+                <small class="help-inline text-danger" ng-show="formProd.nroCalleComercio.$error.pattern">Solo puede ingresar números</small>
             </div>
         </div>
         <!--Boton para proceder al pago-->
